@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SlideShow</title>
+    <style>
+        #main {
+            max-width: 1080px;
+            margin: 50px auto;
+        }
+        
+        #main img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body onload="slide1()">
+    <section id="main">
+        <img src="img/img1.png" alt="imagens" width="500" id="banner">
+    </section>
+
+    <script>
+        var intervalo = 2000
+
+        function slide1() {
+            document.querySelector('#banner').src = 'img/img1.png'
+            setTimeout('slide2()', intervalo)
+        }
+
+        function slide2() {
+            document.querySelector('#banner').src = 'img/img2.png'
+            setTimeout('slide3()', intervalo)
+        }
+
+        function slide3() {
+            document.querySelector('#banner').src = 'img/img3.png'
+            setTimeout('slide4()', intervalo)
+        }
+
+        function slide4() {
+            document.querySelector('#banner').src = 'img/img4.jpg'
+            setTimeout('slide1()', intervalo)
+        }
+    </script>
+</body>
+
+</html>
